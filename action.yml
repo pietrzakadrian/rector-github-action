@@ -1,0 +1,21 @@
+name: 'Rector GitHub Action by pietrzakadrian'
+description: 'Rector GitHub Action by pietrzakadrian'
+author: 'pietrzakadrian'
+
+branding:
+  icon: 'check'
+  color: 'blue'
+
+inputs:
+  config:
+    description: 'config file path'
+    required: true
+  directories:
+    description: 'directories to check'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.config }}
