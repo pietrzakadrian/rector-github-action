@@ -16,8 +16,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Rector
-        uses: pietrzakadrian/rector-github-action@v0.0.2
+        uses: pietrzakadrian/rector-github-action@v0.0.3
         with:
+          directories: src #directories path
           config: rector.php #configuration file
 ```
 
